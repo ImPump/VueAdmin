@@ -1,5 +1,6 @@
 # vueadmin
 ## 正在开发中...
+使用Vue+ElementUI可快速构建前端页面，axios作为http库，mockjs用于生成随机数据，已实现登录功能和管理界面主页，动态菜单栏，动态标签页，还在完善中。
 
 ## Project preview
 
