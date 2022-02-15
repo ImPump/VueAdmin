@@ -11,7 +11,7 @@ import axios from './axios'
 Vue.config.productionTip = false
 Vue.use(Element)
 Vue.prototype.$axios = axios
-require("./mock") //引入mock数据，关闭则注释该行
+require("./mock.js") //引入mock数据，关闭则注释该行
 
 
 

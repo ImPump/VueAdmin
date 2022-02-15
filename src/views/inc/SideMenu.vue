@@ -56,6 +56,43 @@
 <script>
 export default {
   name: "SideMenu",
+  data() {
+    return {
+      menuList: [
+        {
+          name: "SysManga",
+          title: "系统管理",
+          icon: "el-icon-s-operation",
+          path: "",
+          component: "",
+          children: [
+            {
+              name: "SysUser",
+              title: "用户管理",
+              icon: "el-icon-s-custom",
+              path: "/sys/users",
+              children: [],
+            },
+          ],
+        },
+        {
+          name: "SysTools",
+          title: "系统工具",
+          icon: "el-icon-s-tools",
+          path: "",
+          children: [
+            {
+              name: "SysDict",
+              title: "数字字典",
+              icon: "el-icon-s-order",
+              path: "/sys/dicts",
+              children: [],
+            },
+          ],
+        },
+      ],
+    };
+  },
 };
 </script>
 

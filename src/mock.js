@@ -19,7 +19,7 @@ let Result = {
 Mock.mock('/captcha', 'get', () => {
    Result.data = {
       token: Random.string(32), // 获取一个32位的随机字符串,
-      captchaImg: Random.image('100x40', '','11111') //生成验证码为11111的base64图片编码
+      captchaImg: Random.dataImage('100x40', 'p7n5w') //生成验证码为11111的base64图片编码
    }
    return Result
 })
@@ -33,14 +33,28 @@ Mock.mock('/login', 'post', () => {
     
     return Result
 })
- 
+
+// 模拟接口
 Mock.mock('/sys/userInfo', 'get', () => {
    
    Result.data = {
-      id: "1",
-      username: "test",
-      avatar: "",
+      id: Random.id(),
+      username:Random.first(),
+      chinesename:Random.cname(),
+      phone:Random.string('number', 11, 11),
+      province:Random.province(),
+      address:Random.county(true),
+      email: Random.email('163.com'),
+      ip:Random.ip(),
+      avatar: "https://joeschmoe.io/api/v1/male/random",
    }
     
     return Result
  })
+
+ Mock.mock('/logout', 'post', () => {
+
+   // Result.code = 
+   // Result.msg = '退出登录'
+   return Result
+})

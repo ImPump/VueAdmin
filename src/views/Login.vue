@@ -9,7 +9,7 @@
       ></el-image>
 
       <p>项目名：VueAdmin管理系统</p>
-      <p>介绍：这是我的一个练习项目，登录用户名：test，密码：123456</p>
+      <p>登录：用户名：test，密码：123456</p>
     </el-col>
 
     <!-- 中间分割线 -->
@@ -61,7 +61,7 @@ export default {
       loginForm: {
         username: "test",
         password: "123456",
-        code: "11111",
+        code: "",
         token:"", //随机码
       },
       rules: {
@@ -88,6 +88,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
         //   alert("登录成功!");
+        // 提交表单一般用post请求提交到后端
             this.$axios.post('/login',this.loginForm).then(res => {
                 const jwt = res.headers['authorization']
                 this.$store.commit('SET_TOKEN', jwt)
@@ -114,6 +115,7 @@ export default {
         })
     },
   },
+  //页面渲染时加载getCaptcha
     created() {
         this.getCaptcha()
     },

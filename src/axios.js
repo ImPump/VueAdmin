@@ -2,7 +2,7 @@ import axios from "axios";
 import Element from 'element-ui'
 import router from "./router";
 
-// axios.defaults.baseURL = "http://localhost:8081"        //出现跨域问题，可在后端解决
+// axios.defaults.baseURL =  "http://localhost:8081"        //出现跨域问题，可在后端解决
 
 const request = axios.create({
     timeout: 5000,
@@ -27,10 +27,11 @@ request.interceptors.response.use(response => {
     if (res.code === 200) {
         return response
     } else {
-        Element.Message.error(!res.msg ? res.msg : '系统异常！', { duration: 3 * 1000 })
+        Element.Message.error(!res.msg ? '系统异常！' : res.msg , { duration: 3 * 1000 })
         return Promise.reject(response.data.msg)
     }
 },
+    // 异常状态码
     error => {
         console.log(error)
         if (error.response.data) {
