@@ -1,7 +1,7 @@
 <template>
   <el-descriptions
     class="margin-top"
-    title="个人中心（随机生成数据）"
+    title="个人中心"
     :column="3"
     :size="size"
     border
@@ -72,14 +72,12 @@ export default {
     return {
       userInfo: {
         id: "",
-        username: "",
         chinesename: "",
         phone: "",
         province: "",
         address: "",
         email: "",
         ip: "",
-        avatar: "",
       },
     };
   },

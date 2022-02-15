@@ -1,6 +1,6 @@
 <template>
   <div style="text-align: center;">
-    <h2>修改用户密码</h2>
+    <h2>修改密码</h2>
     <el-form
       :model="passForm"
       status-icon
@@ -127,15 +127,12 @@ export default {
 <style scoped>
 div {
   position: relative;
-  width: 100%;
 }
 
 .el-form {
   position: absolute;
   left: 25%;
-  width: 450px;
-  margin: 20px auto;
+  width: 45%;
+  margin: 10px auto;
 }
-
-
 </style>

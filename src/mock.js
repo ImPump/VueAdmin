@@ -58,3 +58,68 @@ Mock.mock('/sys/userInfo', 'get', () => {
    // Result.msg = '退出登录'
    return Result
 })
+
+ Mock.mock('/sys/menu/nav', 'get', () => {
+   
+   let nav = [
+      {
+         name: "SysMange",
+         title: "系统管理",
+         icon: "el-icon-s-operation",
+         path: "",
+         component: "",
+         children: [
+           {
+             name: "SysUser",
+             title: "用户管理",
+             icon: "el-icon-s-custom",
+             path: "/sys/user",
+             component: "sys/User",
+             children: [],
+           },
+           {
+             name: "SysRole",
+             title: "角色管理",
+             icon: "el-icon-rank",
+             path: "/sys/role",
+             component: "sys/Role",
+             children: [],
+           },
+           {
+             name: "SysMenu",
+             title: "菜单管理",
+             icon: "el-icon-menu",
+             path: "/sys/menu",
+             component: "sys/Menu",
+             children: [],
+           },
+         ],
+       },
+
+       {
+         name: "SysTools",
+         title: "系统工具",
+         icon: "el-icon-s-tools",
+         path: "",
+         component: "",
+         children: [
+           {
+             name: "SysDict",
+             title: "数字字典",
+             icon: "el-icon-s-order",
+             path: "/sys/dicts",
+             component: "",
+             children: [],
+           },
+         ],
+       },
+   ]
+   
+   let authoritys = []
+
+   Result.data = {
+      nav:nav,
+      authoritys:authoritys
+   }
+   return Result
+})

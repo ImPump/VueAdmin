@@ -13,42 +13,26 @@
       </el-menu-item>
     </router-link>
 
-    <el-submenu index="1">
+    <el-submenu
+      v-for="(menu, index) in menuList"
+      :key="index"
+      :index="index"
+    >
       <template slot="title">
-        <i class="el-icon-s-operation"></i>
-        <span>系统管理</span>
+        <i :class="menu.icon"></i>
+        <span>{{menu.title}}</span>
       </template>
 
-      <router-link to="/sys/user">
-        <el-menu-item index="1-1">
-          <i class="el-icon-s-custom"></i>
-          <template slot="title">用户管理</template>
+      <router-link
+        v-for="(item, index) in menu.children"
+        :key="index"
+        :to="item.path"
+      >
+        <el-menu-item :index="item.icon">
+          <i :class="item.icon"></i>
+          <template slot="title">{{item.title}}</template>
         </el-menu-item>
       </router-link>
-
-      <router-link to="/sys/role">
-        <el-menu-item index="1-2">
-          <i class="el-icon-rank"></i>
-          <template slot="title">角色管理</template>
-        </el-menu-item>
-      </router-link>
-
-      <router-link to="/sys/menu">
-        <el-menu-item index="1-3">
-          <i class="el-icon-menu"></i>
-          <template slot="title">菜单管理</template>
-        </el-menu-item>
-      </router-link>
-    </el-submenu>
-    <el-submenu index="2">
-      <template slot="title">
-        <i class="el-icon-s-tools"></i>
-        <span>系统工具</span>
-      </template>
-      <el-menu-item index="2-1">
-        <i class="el-icon-s-order"></i>
-        <template slot="title">数字字典</template>
-      </el-menu-item>
     </el-submenu>
   </el-menu>
 </template>
@@ -57,41 +41,15 @@
 export default {
   name: "SideMenu",
   data() {
-    return {
-      menuList: [
-        {
-          name: "SysManga",
-          title: "系统管理",
-          icon: "el-icon-s-operation",
-          path: "",
-          component: "",
-          children: [
-            {
-              name: "SysUser",
-              title: "用户管理",
-              icon: "el-icon-s-custom",
-              path: "/sys/users",
-              children: [],
-            },
-          ],
-        },
-        {
-          name: "SysTools",
-          title: "系统工具",
-          icon: "el-icon-s-tools",
-          path: "",
-          children: [
-            {
-              name: "SysDict",
-              title: "数字字典",
-              icon: "el-icon-s-order",
-              path: "/sys/dicts",
-              children: [],
-            },
-          ],
-        },
-      ],
-    };
+    return {};
+  },
+  // 动态检测
+  computed: {
+    menuList: {
+      get() {
+        return this.$store.state.menus.menuList;
+      },
+    },
   },
 };
 </script>

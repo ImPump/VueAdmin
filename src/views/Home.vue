@@ -33,15 +33,19 @@
           <el-link href="#">笔记</el-link> -->
         </div>
       </el-header>
-      <router-view></router-view>
+      <el-main>
+        <Tabs/>
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </el-container>
 </template>
 
 <script>
 import SideMenu from "./inc/SideMenu.vue";
+import Tabs from "./inc/Tabs.vue";
 export default {
-  components: { SideMenu },
+  components: { SideMenu ,Tabs},
   name: "Home",
   data() {
     return {
@@ -61,16 +65,16 @@ export default {
         this.userInfo = res.data.data;
       });
     },
-    logout(){
+    logout() {
       this.$axios.post("/logout").then((res) => {
         localStorage.clear();
         sessionStorage.clear();
 
-        this.$store.commit("resetState")
+        this.$store.commit("resetState");
 
-        this.$router.push("/login")
-      })
-    }
+        this.$router.push("/login");
+      });
+    },
   },
 };
 </script>
@@ -95,7 +99,9 @@ export default {
   background-color: #ddd;
   color: #333;
   text-align: center;
-  line-height: 160px;
+  /* line-height: 50px; */
+  padding: 0;
+  margin: 0;
 }
 
 .header-avatar {
