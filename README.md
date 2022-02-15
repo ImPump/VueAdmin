@@ -1,6 +1,12 @@
 # vueadmin
 ## 正在开发中...
-使用Vue+ElementUI可快速构建前端页面，axios作为http库，mockjs用于生成随机数据，已实现登录功能和管理界面主页，动态菜单栏，动态标签页，还在完善中。
+相关技术：Vue+ElementUI+axios+mock.js
+
+axios是一个HTTP库，用于拦截请求和响应；
+
+用mock.js插件生成随机码和验证码图片，拦截axios请求，返回模拟的响应数据；
+
+利用ElementUI组件库可快速生成系统的布局、导航菜单、表单等，完成整个系统的页面构建。
 
 ## Project preview
 
@@ -13,7 +19,7 @@
 # UserCenter
 ![image](https://user-images.githubusercontent.com/71574640/153992573-ff6eb231-8136-4a51-b132-cd13d5987413.png)
 
-#UpdatePassword
+# UpdatePassword
 ![image](https://user-images.githubusercontent.com/71574640/153992640-89244e2d-cce1-4dcf-9e72-0cbbd5b45fa3.png)
 
 
