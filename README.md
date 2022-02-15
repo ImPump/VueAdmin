@@ -7,6 +7,9 @@ axios是一个HTTP库，用于拦截请求和响应；
 
 利用ElementUI组件库可快速生成系统的布局、导航菜单、表单等，完成整个系统的页面构建。
 
+## 在线地址：https://vue-admin-drab.vercel.app
+## 源码地址：https://github.com/ImPump/VueAdmin
+
 ## 正在开发中...
 ☆动态导航与动态路由绑定
 
