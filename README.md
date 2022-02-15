@@ -22,16 +22,17 @@ axios是一个HTTP库，用于拦截请求和响应；
 ## Project preview
 
 # Login
-![image](https://user-images.githubusercontent.com/71574640/153979814-38d7fe0e-d944-4a32-abe7-d81ad5230cf7.png)
+![image](https://user-images.githubusercontent.com/71574640/154102077-91f43bca-6ca3-46c9-a0c6-2a81b5d4a8dd.png)
 
 # Home
-![image](https://user-images.githubusercontent.com/71574640/153979775-3916df9e-51b5-4bfd-a1ba-f4edc0c5ce14.png)
+![image](https://user-images.githubusercontent.com/71574640/154101295-0bfd8d95-c37b-45e1-b7ac-2c7b27dc8a71.png)
 
 # UserCenter
-![image](https://user-images.githubusercontent.com/71574640/153992573-ff6eb231-8136-4a51-b132-cd13d5987413.png)
+![image](https://user-images.githubusercontent.com/71574640/154101711-9e46539b-edc1-47be-bd0a-b465da77d283.png)
 
 # UpdatePassword
-![image](https://user-images.githubusercontent.com/71574640/153992640-89244e2d-cce1-4dcf-9e72-0cbbd5b45fa3.png)
+![image](https://user-images.githubusercontent.com/71574640/154101741-8430836c-0daa-4c2d-9823-af683fe108ce.png)
+
 
 
 ## Project setup
