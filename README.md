@@ -10,7 +10,11 @@
 # Home
 ![image](https://user-images.githubusercontent.com/71574640/153979775-3916df9e-51b5-4bfd-a1ba-f4edc0c5ce14.png)
 
+# UserCenter
+![image](https://user-images.githubusercontent.com/71574640/153992573-ff6eb231-8136-4a51-b132-cd13d5987413.png)
 
+#UpdatePassword
+![image](https://user-images.githubusercontent.com/71574640/153992640-89244e2d-cce1-4dcf-9e72-0cbbd5b45fa3.png)
 
 
 ## Project setup
